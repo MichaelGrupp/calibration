@@ -85,7 +85,11 @@ on all flavors of Unix.
 The first step is installing CSM. Please see the instructions at the website
 <http://purl.org/censi/2007/csm>.
 
-The minimal steps are as follows:
+ROS users can install it via:
+
+    $ sudo apt install ros-<rosdistro>-csm
+
+Alternatively, the minimal steps are as follows:
 
     $ git clone git://github.com/AndreaCensi/csm.git
     $ cd csm
@@ -101,11 +105,10 @@ case, this is ``/usr/local``:
 Compiling the calibration software does not require more dependencies than 
 CSM itself (e.g., GSL). 
 
-The installation is simple:
+Building is simple (creates output in ``bin/``):
 
-    $ cd src/
     $ cmake .
-    $ make install
+    $ make
      
 
 Execution instructions
