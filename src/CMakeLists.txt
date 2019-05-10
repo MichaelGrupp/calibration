@@ -6,9 +6,9 @@ pkg_check_modules(GSL REQUIRED gsl)
 pkg_check_modules(CSM REQUIRED csm)
 
 IF(${CSM_FOUND})
-	MESSAGE("CSM_LIBRARY_DIRS: ${CSM_LIBRARY_DIRS}")
-	MESSAGE("CSM_LIBRARIES: ${CSM_LIBRARIES}")
-	MESSAGE("CSM_INCLUDE_DIRS: ${CSM_INCLUDE_DIRS}")
+	MESSAGE(STATUS "CSM_LIBRARY_DIRS: ${CSM_LIBRARY_DIRS}")
+	MESSAGE(STATUS "CSM_LIBRARIES: ${CSM_LIBRARIES}")
+	MESSAGE(STATUS "CSM_INCLUDE_DIRS: ${CSM_INCLUDE_DIRS}")
 
 	INCLUDE_DIRECTORIES(${CSM_INCLUDE_DIRS})
 	LINK_DIRECTORIES(${CSM_LIBRARY_DIRS})
@@ -42,7 +42,6 @@ TARGET_LINK_LIBRARIES(solver ${CSM_LIBRARIES})
 
 ADD_EXECUTABLE(solver2 solver2.cpp solver2_meat.cpp solver_options.cpp solver_utils.cpp aux_functions.cpp calib_tuple.cpp gsl_jacobian.cpp)
 TARGET_LINK_LIBRARIES(solver2 ${CSM_LIBRARIES})
-
 
 ADD_EXECUTABLE(verifier verifier.cpp verifier_options.cpp verifier_utils.cpp aux_functions.cpp analyzer.cpp)
 TARGET_LINK_LIBRARIES(verifier ${CSM_LIBRARIES})
