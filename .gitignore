@@ -2,6 +2,10 @@
 .vscode/
 .idea/
 
+# build dir
+bin/
+build/
+
 # CMake stuff
 # https://github.com/github/gitignore/blob/master/CMake.gitignore
 CMakeLists.txt.user
